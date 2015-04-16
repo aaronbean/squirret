@@ -16,7 +16,7 @@ module.exports = function (app) {
         var shots = req.query.shots || 1;
 
         return Promise.try(function () {
-            switch (req.param.command.toLowerCase()) {
+            switch (req.params.command.toLowerCase()) {
                 case 'down':
                     return cheeky.moveDownAsync(duration);
                 case 'left':
@@ -39,7 +39,7 @@ module.exports = function (app) {
     });
 
     app.get('/turret/exec/:commands', function (req, res) {
-        return cheeky.executeAsync(req.param.commands)
+        return cheeky.executeAsync(req.params.commands)
             .then(function () {
                 return res.send(200);
             });
