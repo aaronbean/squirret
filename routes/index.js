@@ -31,10 +31,10 @@ module.exports = function (app) {
                     return cheeky.fireAsync(shots);
                 default:
                     return cheeky.parkAsync(duration);
-            })
-            .then(function () {
-                return res.send(200);
-            });
+            }
+        })
+        .then(function () {
+            return res.send(200);
         });
     });
 
