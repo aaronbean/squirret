@@ -15,7 +15,6 @@ var methodOverride = require('method-override');
 var morgan = require('morgan');
 var path = require('path');
 var session = require('express-session');
-var RedisStore = require('connect-redis')(session);
 
 var app = global.app = express();
 
@@ -36,7 +35,6 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     secret: config.session.secret,
-    store: new RedisStore(config.redis)
 }));
 app.use(require('./lib/middleware/pretty').prettyPrint(2)); // pretty JSON output priting with pretty=1 URL parameter
 

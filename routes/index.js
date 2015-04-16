@@ -31,14 +31,14 @@ module.exports = function (app) {
                     return cheeky.fireAsync(shots);
                 default:
                     return cheeky.parkAsync(duration);
-            })
-            .then(function () {
-                return res.send(200);
-            });
+            }
+        })
+        .then(function () {
+            return res.send(200);
         });
     });
 
-    app,get('/turret/exec/:commands', function (req, res) {
+    app.get('/turret/exec/:commands', function (req, res) {
         return cheeky.executeAsync(req.params.commands)
             .then(function () {
                 return res.send(200);

@@ -2,5 +2,4 @@
 dependencies:
   - { role: git }
   - { role: nodejs }
-  - { role: redis }
-  - { role: naught }
+  - { role: naught, start_as_root: true }
