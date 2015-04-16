@@ -1,0 +1,17 @@
+# Ansible
+*.key
+*-unencrypted.yml
+
+# Intellij
+.idea
+*.iml
+
+# Node.js
+bower_components
+config/local.json
+config/runtime.json
+node_modules
+npm-debug.log
+
+# squirret
+public/server-error-pages

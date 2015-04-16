@@ -1,0 +1,10 @@
+{
+    "developer": {
+        "name": "Beardon Services, Inc.",
+        "email": "aaron.bean@beardon.com",
+        "url": "http://www.beardon.com"
+    },
+    "session": {
+        "secret": "EO9MkVp9Xtrp"
+    }
+}
