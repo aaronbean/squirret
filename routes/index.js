@@ -38,7 +38,7 @@ module.exports = function (app) {
         });
     });
 
-    app,get('/turret/exec/:commands', function (req, res) {
+    app.get('/turret/exec/:commands', function (req, res) {
         return cheeky.executeAsync(req.param.commands)
             .then(function () {
                 return res.send(200);
