@@ -2,8 +2,6 @@
 - hosts: all
   roles:
     - application-user
-    - sles-sdk
-    - vmware-tools
   tags:
     - os
   remote_user: root
