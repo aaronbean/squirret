@@ -5,6 +5,7 @@
 require('./app');
 
 var config = require('config');
+var serverLib = require('./lib/server');
 
 var port = +process.env.PORT || config.node.port || 3000;
 
@@ -20,6 +21,7 @@ server.on('listening', function () {
 
 process.on('message', function (message) {
     if (message === 'shutdown') {
+        serverLib.performCleanup();
         process.exit(0);
     }
 });

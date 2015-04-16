@@ -1,0 +1,4 @@
+---
+nginx_server_name: "{{ domain }}"
+nginx_ssl_path: /etc/nginx/ssl
+nginx_upstream_name: "{{ appname }}_{{ node_env }}"
