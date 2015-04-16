@@ -2,11 +2,6 @@
     "node": {
         "port": 3302
     },
-    "redis": {
-        "host": "localhost",
-        "port": 6379,
-        "db": 1
-    },
     "trust": {
         "enabled": false,
         "whitelist": {
